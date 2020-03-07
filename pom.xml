@@ -57,7 +57,7 @@
                             <name>${project.artifactId}:${project.version}</name>
                         <build>
                             <from>fabric8/java</from>
-                            <dockerFileDir>${project.basedir}/</dockerFileDir>
+                            <dockerFileDir>${project.basedir}/src/main/docker</dockerFileDir>
                             <assembly>
                                 <descriptorRef>artifact</descriptorRef>
                             </assembly>
