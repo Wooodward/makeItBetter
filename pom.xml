@@ -66,6 +66,19 @@
                                 <ports>
                                     <port>localhost:8080:8080</port>
                                 </ports>
+                                <dependsOn>mongo</dependsOn>
+                            </run>
+                        </image>
+                        <image>
+                            <name>mongo</name>
+                            <alias>mongo</alias>
+                            <run>
+                                <ports>
+                                    <port>27017:27017</port>
+                                </ports>
+                                <wait>
+                                    <time>10000</time>
+                                </wait>
                             </run>
                         </image>
                     </images>
