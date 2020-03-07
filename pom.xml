@@ -29,6 +29,19 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-rest</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
@@ -82,6 +95,9 @@
                                 <ports>
                                     <port>localhost:8080:8080</port>
                                 </ports>
+                                <links>
+                                    <link>mongo:mongo</link>
+                                </links>
                                 <dependsOn>mongo</dependsOn>
                             </run>
                         </image>
@@ -91,6 +107,8 @@
                             <run>
                                 <ports>
                                     <port>27017:27017</port>
+                                    <port>27018:27018</port>
+                                    <port>27019:27019</port>
                                 </ports>
                                 <wait>
                                     <time>10000</time>
