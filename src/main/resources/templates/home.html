@@ -3,12 +3,14 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}">
 <head>
     <title>Spring Security Example</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
 <div layout:fragment="content">
     <h1>Welcome!</h1>
 
-    <p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
+    <p>Click <a th:href="@{/dashboard}">here</a> to see a greeting.</p>
 </div>
 </body>
 </html>
